@@ -104,6 +104,18 @@ Para poder generar los objetos asociados necesitamos:
 
 Al hacer el `mvn clean compile` podremos ver en la siguiente ruta: `target\generated-sources\protobuf\java` los archivos generados
 
+## Para cualquier lenguaje (Windows)
+
+Según la respuesta de Yuvaraj en: https://stackoverflow.com/questions/13616033/install-protocol-buffers-on-windows
+
+Solo tienes que descargar: https://github.com/protocolbuffers/protobuf/releases/download/v3.19.1/protoc-3.19.1-win64.zip
+
+- Una vez que la tengas debes descomprimirla en una ruta
+- Esa ruta la tienes que meter como PROTOC_HOME en las variables de entorno
+- A continuación añadiremos %PROTOC_HOME%\bin a la variable path
+- Abriremos una nueva terminal (no vale las que tengamos abiertas ya que has modificado las variables de entorno)
+- Para finalizar comprobaremos la correcta instalación y configuración con el comando: `protoc`
+
 # Diferencias REST vs gRPC
 
 En el rest la comunicación solo se puede hacer en un sentido `cliente -> servidor` mientras que en gRPC en todos los sentidos.

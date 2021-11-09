@@ -21,9 +21,11 @@ public class HelloWorldServiceImpl extends HelloWorldServiceImplBase {
 		LOGGER.info("server received {}", request);
 
 		String message = "Hello " + request.getFirstName() + " " + request.getLastName() + "!";
+
 		Greeting greeting = Greeting.newBuilder()
 		        .setMessage(message)
 		        .build();
+
 		LOGGER.info("server responded {}", greeting);
 
 		responseObserver.onNext(greeting);
